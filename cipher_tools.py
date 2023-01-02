@@ -86,14 +86,20 @@ args = parser.parse_args()
 
 # Clean the inputs before doing any operations
 if args.alphabet.islower():
-  args.ciphertext = args.ciphertext.lower()
-  args.plaintext = args.plaintext.lower()
+    if args.ciphertext:
+        args.ciphertext = args.ciphertext.lower()
+    if args.plaintext:
+        args.plaintext = args.plaintext.lower()
 if args.alphabet.isupper():
-  args.ciphertext = args.ciphertext.upper()
-  args.plaintext = args.plaintext.upper()
+    if args.ciphertext:
+        args.ciphertext = args.ciphertext.upper()
+    if args.plaintext:
+        args.plaintext = args.plaintext.upper()
 
-ciphertext = ''.join(c for c in args.ciphertext if c in args.alphabet)
-plaintext = ''.join(c for c in args.plaintext if c in args.alphabet)
+if args.ciphertext:
+    args.ciphertext = ''.join(c for c in args.ciphertext if c in args.alphabet)
+if args.plaintext:
+    args.plaintext = ''.join(c for c in args.plaintext if c in args.alphabet)
 
 # Perform the specified operation
 if args.operation == "encode":
