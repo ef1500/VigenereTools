@@ -10,7 +10,7 @@ This program requires Python 3.
 
 To run the program, use the following command:
 
-`python vigenere.py [operation] [options]`
+`python cipher_tools.py [operation] [options]`
 
 
 ### Options
