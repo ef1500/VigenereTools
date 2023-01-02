@@ -25,17 +25,17 @@ To run the program, use the following command:
 
 To encode a message using the Vigenère cipher:
 
-`python vigenere.py encode -a ABCDEFGHIJKLMNOPQRSTUVWXYZ -k HELLO -p HELLO`
+`python cipher_tools.py encode -a ABCDEFGHIJKLMNOPQRSTUVWXYZ -k HELLO -p HELLO`
 
 
 To decode a message using the Vigenère cipher:
 
-`python vigenere.py decode -a ABCDEFGHIJKLMNOPQRSTUVWXYZ -k HELLO -c IFMMP`
+`python cipher_tools.py decode -a ABCDEFGHIJKLMNOPQRSTUVWXYZ -k HELLO -c IFMMP`
 
 
 To find the key for a Vigenère cipher using the plaintext and ciphertext:
 
-`python vigenere.py reversekey -a ABCDEFGHIJKLMNOPQRSTUVWXYZ -p HELLO -c IFMMP`
+`python cipher_tools.py reversekey -a ABCDEFGHIJKLMNOPQRSTUVWXYZ -p HELLO -c IFMMP`
 
 
 ## Table Generator
